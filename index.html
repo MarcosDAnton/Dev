@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web</title>
+  <title>Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&display=swap"
@@ -461,7 +461,7 @@
   <header class="relative z-10 px-8 md:px-16 pt-20 pb-14">
 
     <h1 class="fade-up d2 font-orbit font-black leading-none tracking-tight">
-      <span class="block text-5xl md:text-8xl text-white neon-white">WEB</span>
+      <span class="block text-5xl md:text-8xl text-white neon-white">DEV</span>
       <span class="block text-5xl md:text-8xl neon-gold">PROJECTS</span>
     </h1>
 
@@ -471,7 +471,7 @@
 
 
       <div class="stat-box">
-        <div class="font-orbit text-2xl neon-blue font-black">6</div>
+        <div class="font-orbit text-2xl neon-blue font-black">7</div>
         <div class="font-mono text-xs text-white/25 mt-1 tracking-widest">Tecnologias</div>
         <div
           style="position:absolute;top:0;left:0;width:11px;height:11px;border-top:2px solid  #00AAFF;border-left:2px solid  #00AAFF;">
@@ -512,6 +512,11 @@
         <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank"><span class="font-mono text-xs tracking-widest">HTML5</span></a>
       </div>
 
+       <div class="flex items-center gap-2 text-white/40">
+        <i class="devicon-angular-plain colored text-2xl" style="color:#c31010;"></i>
+        <a href="https://angular.io/" target="_blank"><span class="font-mono text-xs tracking-widest">Angular</span></a>
+      </div>
+
       <div class="flex items-center gap-2 text-white/40">
         <i class="devicon-tailwindcss-plain text-2xl" style="color:#0b7ccd;"></i>
         <a href="https://tailwindcss.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Tailwind CSS</span></a>
@@ -522,13 +527,7 @@
         <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank"><span class="font-mono text-xs tracking-widest">JavaScript</span></a>
       </div>
 
-
-      <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-angular-plain colored text-2xl" style="color:#c31010;"></i>
-        <a href="https://angular.io/" target="_blank"><span class="font-mono text-xs tracking-widest">Angular</span></a>
-      </div>
-
-       <div class="flex items-center gap-2 text-white/40">
+        <div class="flex items-center gap-2 text-white/40">
         <i class="devicon-react-plain colored text-2xl" style="color:#00bbff;"></i>
         <a href="https://reactjs.org/" target="_blank"><span class="font-mono text-xs tracking-widest">React</span></a>
       </div>
@@ -539,6 +538,7 @@
         <a href="https://nodejs.org/" target="_blank"><span class="font-mono text-xs tracking-widest">Node.js</span></a>
       </div>
 
+     
       <div class="flex items-center gap-2 text-white/40">
         <i class="devicon-docker-plain text-2xl" style="color:#0008e7;"></i>
         <a href="https://www.docker.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Docker</span></a>
@@ -552,9 +552,10 @@
   <section class="relative z-10 px-8 md:px-16 mt-12 flex flex-wrap gap-3 items-center">
     <span class="font-mono text-xs text-white/20 tracking-widest mr-2">FILTRAR:</span>
     <button onclick="fc('all')" class="fbtn active" data-f="all">Todos</button>
-    <button onclick="fc('web')" class="fbtn" data-f="web">Web App</button>
-    <button onclick="fc('api')" class="fbtn" data-f="api">API / Back</button>
     <button onclick="fc('ui')" class="fbtn" data-f="ui">UI / Front</button>
+    <button onclick="fc('api')" class="fbtn" data-f="api">API / Back</button>
+    <button onclick="fc('web')" class="fbtn" data-f="web">Web App</button>
+   
   </section>
 
 
@@ -581,11 +582,11 @@
               class="font-orbit text-sm font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
               Lojas de Roupas</h2>
           </div>
-          <p class="font-mono text-xs text-white/30 mt-2 leading-loose">
+          <p class="font-mono text-xs mt-2 leading-loose">
             E-commerce de moda responsiva, com filtros dinâmicos e integração com redes sociais.
           </p>
 
-          <div class="flex gap-5 mt-4"><a href="#" class="nl">Ver Projeto ↗</a></div>
+          <div class="flex gap-5 mt-4"><a href="#" class="nl">Ver ↗</a></div>
         </div>
       </article>
 
@@ -608,10 +609,10 @@
               class="font-orbit text-sm font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
               Clinicas Médicas</h2>
           </div>
-          <p class="font-mono text-xs text-white/30 mt-2 leading-loose">
+          <p class="font-mono text-xs mt-2 leading-loose">
             Página para Clínicas médicas, com o portfolio do médico e suas redes sociais.
           </p>
-          <div class="flex gap-5 mt-4"><a href="#" class="nl">Ver Projeto ↗</a></div>
+          <div class="flex gap-5 mt-4"><a href="#" class="nl">Ver ↗</a></div>
         </div>
       </article>
     </div>
@@ -630,12 +631,12 @@
     class="relative z-10 border-t border-white/5 px-8 md:px-16 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
     <div class="flex items-center gap-3">
       <span class="pulse-dot gold"></span>
-      <span class="font-mono text-xs text-white/18 tracking-widest">&copy; <span id="current-year"></span> DEV. WEB
+      <span class="font-mono text-xs text-white/18 tracking-widest">&copy; <span id="current-year"></span> DEV.
         PROJECTS</span>
     </div>
     <div class="flex gap-8">
       <a href="https://github.com/MarcosDAnton" target="_blank" class="nl">GitHub</a>
-      <a href="www.linkedin.com/in/marcosdanton" target="_blank" class="nl">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/marcos-antonio-d-silva-pereira-843446402/" target="_blank" class="nl">LinkedIn</a>
     </div>
   </footer>
 
