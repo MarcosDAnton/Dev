@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer</title>
+  <title>Dev</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&display=swap"
@@ -454,10 +454,9 @@
 </head>
 
 <body class="min-h-screen">
-
   <canvas id="wire-canvas"></canvas>
 
-  <!-- HERO -->
+  <!-- ==================================================================== HERO ========================================================================================= -->
   <header class="relative z-10 px-8 md:px-16 pt-20 pb-14">
 
     <h1 class="fade-up d2 font-orbit font-black leading-none tracking-tight">
@@ -481,7 +480,7 @@
         </div>
       </div>
       <div class="stat-box">
-        <div class="font-orbit text-2xl white font-black">∞</div>
+        <div class="font-orbit text-2xl green font-black">∞</div>
         <div class="font-mono text-xs text-white/25 mt-1 tracking-widest">COMMITS</div>
         <div
           style="position:absolute;top:0;left:0;width:11px;height:11px;border-top:2px solid #00AAFF;border-left:2px solid #00AAFF;">
@@ -504,7 +503,12 @@
   </header>
 
 
-  <!-- TECNOLOGIAS -->
+
+
+
+
+
+  <!-- ==================================================================== TECNOLOGIAS ================================================================================ -->
   <div class="relative z-10 border-y border-white/5 py-4" style="background:rgba(0,170,255,0.03);">
     <div class="flex items-center justify-center gap-8 flex-wrap px-8 md:px-16">
       <div class="flex items-center gap-2 text-white/40">
@@ -548,23 +552,40 @@
   </div>
 
 
-  <!-- FILTERS -->
+
+
+
+
+
+
+
+
+
+  <!-- ====================================================================== FILTERS ================================================================================ -->
   <section class="relative z-10 px-8 md:px-16 mt-12 flex flex-wrap gap-3 items-center">
     <span class="font-mono text-xs text-white/20 tracking-widest mr-2">FILTRAR:</span>
     <button onclick="fc('all')" class="fbtn active" data-f="all">Todos</button>
-    <button onclick="fc('ui')" class="fbtn" data-f="ui">UI / Front</button>
-    <button onclick="fc('api')" class="fbtn" data-f="api">API / Back</button>
-    <button onclick="fc('web')" class="fbtn" data-f="web">Web App</button>
-   
+    <button onclick="fc('web')" class="fbtn" data-f="web">Web</button>
+    <button onclick="fc('mobile')" class="fbtn" data-f="mobile">Mobile</button>
+    <button onclick="fc('desktop')" class="fbtn" data-f="desktop">Desktop</button>
+    <button onclick="fc('game')" class="fbtn" data-f="game">Game</button>
+    <button onclick="fc('devops')" class="fbtn" data-f="devops">DevOps/ DevSecOps</button>
   </section>
 
 
-  <!-- CARDS -->
+
+
+
+
+
+
+
+  <!-- ====================================================================== CARDS ====================================================================== -->
   <main class="relative z-10 px-8 md:px-16 mt-8 pb-28">
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="pgrid">
-      <!-- Card 1 -->
-      <article data-cat="ui" class="project-card fade-up d2 cursor-pointer group">
+      <!-- Loja de Roupas -->
+      <article data-cat="web" class="project-card fade-up d2 cursor-pointer group">
         <div
           style="position:absolute;top:0;left:0;width:11px;height:11px;border-top:2px solid  #00AAFF;border-left:2px solid  #00AAFF;z-index:2;">
         </div>
@@ -580,7 +601,7 @@
           <div class="flex items-start justify-between gap-2">
             <h2
               class="font-orbit text-sm font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-              Lojas de Roupas</h2>
+              Loja de Roupas</h2>
           </div>
           <p class="font-mono text-xs mt-2 leading-loose">
             E-commerce de moda responsiva, com filtros dinâmicos e integração com redes sociais.
@@ -590,8 +611,11 @@
         </div>
       </article>
 
-      <!-- Card 2 -->
-      <article data-cat="ui" class="project-card fade-up d3 cursor-pointer group">
+
+
+
+      <!-- Clínica Médica -->
+      <article data-cat="web" class="project-card fade-up d3 cursor-pointer group">
         <div
           style="position:absolute;top:0;left:0;width:11px;height:11px;border-top:2px solid  #00AAFF;border-left:2px solid  #00AAFF;z-index:2;">
         </div>
@@ -607,7 +631,7 @@
           <div class="flex items-start justify-between gap-2">
             <h2
               class="font-orbit text-sm font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-              Clinicas Médicas</h2>
+              Clinica Médica</h2>
           </div>
           <p class="font-mono text-xs mt-2 leading-loose">
             Página para Clínicas médicas, com o portfolio do médico e suas redes sociais.
@@ -615,7 +639,50 @@
           <div class="flex gap-5 mt-4"><a href="#" class="nl">Ver ↗</a></div>
         </div>
       </article>
+
+
+
+      <!-- Arcade -->
+      <article data-cat="game" class="project-card fade-up d3 cursor-pointer group">
+        <div
+          style="position:absolute;top:0;left:0;width:11px;height:11px;border-top:2px solid  #00AAFF;border-left:2px solid  #00AAFF;z-index:2;">
+        </div>
+        <div
+          style="position:absolute;bottom:0;right:0;width:11px;height:11px;border-bottom:2px solid  #00AAFF;border-right:2px solid  #00AAFF;z-index:2;">
+        </div>
+
+        <div class="card-vis" style="background:linear-gradient(135deg,#050505,#00080f);">
+          <img src="./Game/Arcade.png" width="100%">
+        </div>
+
+        <div class="p-5">
+          <div class="flex items-start justify-between gap-2">
+            <h2
+              class="font-orbit text-sm font-bold text-white group-hover:text-yellow-400 transition-colors duration-300">
+              Arcade</h2>
+          </div>
+          <p class="font-mono text-xs mt-2 leading-loose">
+            Sejam bem vindo(a)(s) aos meu Arcade de Dev. Game.
+          </p>
+          <div class="flex gap-5 mt-4"><a href="https://makidextreme.github.io/Arcade/" target="_blank" class="nl">Ver ↗</a></div>
+        </div>
+      </article>
+
     </div>
+
+     
+    
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Botão de Mais Projetos... 
      <div class="flex justify-center mt-14">
@@ -626,7 +693,12 @@
 
 
 
-  <!-- FOOTER -->
+
+
+
+
+
+  <!-- ===================================================== FOOTER ================================================================================================ -->
   <footer
     class="relative z-10 border-t border-white/5 px-8 md:px-16 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
     <div class="flex items-center gap-3">
@@ -669,14 +741,6 @@
 
 
 
-
-
-
-
-
-
-
-
     // ENERGY WIRES CANVAS
     const cv = document.getElementById('wire-canvas');
     const ctx = cv.getContext('2d');
@@ -688,7 +752,7 @@
     const wires = [];
 
     function makeWire() {
-      const col = [0, 170, 255];
+      const col = [0, 255, 110];
       const pts = [];
 
       // start from edge
@@ -804,6 +868,6 @@
     }
     requestAnimationFrame(loop);
   </script>
-</body>
 
+</body>
 </html>
