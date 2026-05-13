@@ -450,6 +450,50 @@
       position: relative;
       background: #060606;
     }
+
+    /* Profile Card */
+    .profile-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform .35s cubic-bezier(.22, .68, 0, 1.2),
+        border-color .35s, box-shadow .35s;
+      border-color: #00AA0033;
+    }
+
+    .profile-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #00AA00, transparent);
+      opacity: 0;
+      transition: opacity .4s;
+    }
+
+    .profile-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #00AA00, transparent);
+      opacity: 0;
+      transition: opacity .4s;
+    }
+
+    .profile-card:hover::before,
+    .profile-card:hover::after {
+      opacity: 1;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-4px);
+      border-color: #00AA0044;
+      box-shadow: 0 0 30px #00AA0018, 0 4px 40px #00000080;
+    }
   </style>
 </head>
 
@@ -459,8 +503,19 @@
   <!-- ==================================================================== HERO ========================================================================================= -->
   <header class="relative z-10 px-8 md:px-16 pt-20 pb-14">
 
+    <div class="fade-up d1 profile-card flex flex-col md:flex-row items-center gap-6 mb-12 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_0_40px_rgba(0,0,0,0.25)]">
+      <img src="https://avatars.githubusercontent.com/u/274956009?v=4" alt="Foto de perfil" class="h-28 w-28 rounded-full border-2 border-white/20 object-cover shadow-lg" />
+      <div class="max-w-3xl text-center md:text-left">
+        <p class="font-mono text-sm uppercase tracking-[0.36em] text-white/40 mb-3">Sobre mim</p>
+        <h2 class="font-orbit text-3xl text-white font-black leading-tight mb-3">Dev. Marcos Antonio</h2>
+        <p class="font-mono text-sm text-white/70 leading-relaxed">
+          "Sou apaixonado por tecnologia e movido pelo desafio de transformar ideias em soluções inovadoras. Meu foco está em construir projetos que unam interfaces limpas a um back-end robusto, sempre priorizando segurança e qualidade de softwares. Vejo cada novo desafio como uma oportunidade de evoluir tecnicamente e contribuir para que a tecnologia impacte positivamente a vida das pessoas."</p>
+      </div>
+    </div>
+
+    <br><br><br>
+
     <h1 class="fade-up d2 font-orbit font-black leading-none tracking-tight">
-      <span class="block text-5xl md:text-8xl text-white neon-white">DEV</span>
       <span class="block text-5xl md:text-8xl neon-gold">PROJECTS</span>
     </h1>
 
@@ -502,54 +557,6 @@
     </div>
   </header>
 
-
-
-
-
-
-
-  <!-- ==================================================================== TECNOLOGIAS ================================================================================ -->
-  <div class="relative z-10 border-y border-white/5 py-4" style="background:rgba(0,170,255,0.03);">
-    <div class="flex items-center justify-center gap-8 flex-wrap px-8 md:px-16">
-      <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-html5-plain text-2xl" style="color:#E34F26;"></i>
-        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank"><span class="font-mono text-xs tracking-widest">HTML5</span></a>
-      </div>
-
-       <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-angular-plain colored text-2xl" style="color:#c31010;"></i>
-        <a href="https://angular.io/" target="_blank"><span class="font-mono text-xs tracking-widest">Angular</span></a>
-      </div>
-
-      <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-tailwindcss-plain text-2xl" style="color:#0b7ccd;"></i>
-        <a href="https://tailwindcss.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Tailwind CSS</span></a>
-      </div>
-
-      <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-javascript-plain text-2xl" style="color:#F7DF1E;"></i>
-        <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank"><span class="font-mono text-xs tracking-widest">JavaScript</span></a>
-      </div>
-
-        <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-react-plain colored text-2xl" style="color:#00bbff;"></i>
-        <a href="https://reactjs.org/" target="_blank"><span class="font-mono text-xs tracking-widest">React</span></a>
-      </div>
-
-     
-      <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-nodejs-plain colored text-2xl" style="color:#339933;"></i>
-        <a href="https://nodejs.org/" target="_blank"><span class="font-mono text-xs tracking-widest">Node.js</span></a>
-      </div>
-
-     
-      <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-docker-plain text-2xl" style="color:#0008e7;"></i>
-        <a href="https://www.docker.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Docker</span></a>
-      </div>
-
-    </div>
-  </div>
 
 
 
@@ -690,6 +697,58 @@
     </div>
     -->
   </main>
+
+
+
+
+   <!-- ==================================================================== TECNOLOGIAS ================================================================================ -->
+  <div class="relative z-10 border-y border-white/5 py-4" style="background:rgba(0,170,255,0.03);">
+    <div class="flex items-center justify-center gap-8 flex-wrap px-8 md:px-16">
+      <div class="flex items-center gap-2 text-white/40">
+        <i class="devicon-html5-plain text-2xl" style="color:#E34F26;"></i>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank"><span class="font-mono text-xs tracking-widest">HTML5</span></a>
+      </div>
+
+      <div class="flex items-center gap-2 text-white/40">
+        <i class="devicon-tailwindcss-plain text-2xl" style="color:#0b7ccd;"></i>
+        <a href="https://tailwindcss.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Tailwind CSS</span></a>
+      </div>
+
+      <div class="flex items-center gap-2 text-white/40">
+        <i class="devicon-javascript-plain text-2xl" style="color:#F7DF1E;"></i>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank"><span class="font-mono text-xs tracking-widest">JavaScript</span></a>
+      </div>
+
+      <div class="flex items-center gap-2 text-white/40">
+        <i class="devicon-react-plain colored text-2xl" style="color:#00bbff;"></i>
+        <a href="https://reactjs.org/" target="_blank"><span class="font-mono text-xs tracking-widest">React</span></a>
+      </div>
+
+     
+      <div class="flex items-center gap-2 text-white/40">
+        <i class="devicon-nodejs-plain colored text-2xl" style="color:#339933;"></i>
+        <a href="https://nodejs.org/" target="_blank"><span class="font-mono text-xs tracking-widest">Node.js</span></a>
+      </div>
+
+     
+      <div class="flex items-center gap-2 text-white/40">
+        <i class="devicon-docker-plain text-2xl" style="color:#0008e7;"></i>
+        <a href="https://www.docker.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Docker</span></a>
+      </div>
+
+      <div class="flex items-center gap-2 text-white/40">
+        <img src="https://www.notion.com/_next/image?url=https%3A%2F%2Fs3.us-west-2.amazonaws.com%2Fpublic.notion-static.com%2Fcreator_images%2FFrame_2147224304.png&w=256&q=75" width="25" class="text-2xl">
+        <a href="https://lovable.dev/dashboard?utm_device=c&utm_source=google&utm_medium=paid_search_branded&utm_campaign=google-br-b2c-prospecting-evergreen-subscription-XB+-+Search+-+Lovable+-+CORE&campaignid=23350529747&gad_source=1&gad_campaignid=23350529747&gbraid=0AAAAA-iIxGcy9gn_JUgXSg_RO1YPwvtbx&gclid=CjwKCAjw5NvPBhAoEiwA_2egfg6w9H3UG5Rn3uxhfdIDE3OTVxA_o4bA66m8cONo4uFe4aKsqcBVpxoCenwQAvD_BwE" target="_blank"><span class="font-mono text-xs tracking-widest">Lovable</span></a>
+      </div>
+
+        <div class="flex items-center gap-2 text-white/40">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Claude_AI_symbol.svg/3840px-Claude_AI_symbol.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" width="25" class="text-2xl">
+        <a href="https://claude.ai/new" target="_blank"><span class="font-mono text-xs tracking-widest">Claude</span></a>
+      </div>
+
+       
+    </div>
+  </div>
 
 
 
