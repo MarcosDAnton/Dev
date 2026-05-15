@@ -729,83 +729,115 @@
 
 
     <!-- ==================================================================== TECNOLOGIAS ================================================================================ -->
-  <div class="relative z-10 border-y border-white/5 py-4" style="background:rgba(0,170,255,0.03);">
-    <div class="flex items-center justify-center gap-8 flex-wrap px-8 md:px-16">
-      <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-html5-plain colored"></i>
-        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank"><span class="font-mono text-xs tracking-widest">HTML5</span></a>
-      </div>
+  <div id="tech-marquee" class="relative z-10 border-y border-white/5 py-4 overflow-hidden" style="background:rgba(0,170,255,0.03);">
+    <div id="tech-track-wrapper" class="absolute inset-0 flex items-center will-change-transform" style="transform: translateX(0);">
+      <div id="tech-track" class="flex items-center gap-8 px-8 md:px-16 min-w-max">
+        <div class="flex items-center gap-2 text-white/40">
+          <i class="devicon-html5-plain colored"></i>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank"><span class="font-mono text-xs tracking-widest">HTML5</span></a>
+        </div>
 
-      <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-tailwindcss-plain colored text-2xl"></i>
-        <a href="https://tailwindcss.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Tailwind CSS</span></a>
-      </div>
+        <div class="flex items-center gap-2 text-white/40">
+          <i class="devicon-tailwindcss-plain colored text-2xl"></i>
+          <a href="https://tailwindcss.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Tailwind CSS</span></a>
+        </div>
 
-      <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-javascript-plain colored"></i>
-        <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank"><span class="font-mono text-xs tracking-widest">JavaScript</span></a>
-      </div>
+        <div class="flex items-center gap-2 text-white/40">
+          <i class="devicon-javascript-plain colored"></i>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank"><span class="font-mono text-xs tracking-widest">JavaScript</span></a>
+        </div>
 
-      <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-react-plain colored text-2xl"></i>
-        <a href="https://reactjs.org/" target="_blank"><span class="font-mono text-xs tracking-widest">React</span></a>
-      </div>
+        <div class="flex items-center gap-2 text-white/40">
+          <i class="devicon-react-plain colored text-2xl"></i>
+          <a href="https://reactjs.org/" target="_blank"><span class="font-mono text-xs tracking-widest">React</span></a>
+        </div>
 
-      <div class="flex items-center gap-2 text-white/40">
-        <img src="https://www.scorchsoft.com/public/capabilities/head/react-native-logo-square.webp" width="25">
-        <a href="https://reactnative.dev/" target="_blank"><span class="font-mono text-xs tracking-widest">React Native</span></a>
-      </div>
+        <div class="flex items-center gap-2 text-white/40">
+          <img src="https://www.scorchsoft.com/public/capabilities/head/react-native-logo-square.webp" width="25">
+          <a href="https://reactnative.dev/" target="_blank"><span class="font-mono text-xs tracking-widest">React Native</span></a>
+        </div>
 
+        <div class="flex items-center gap-2 text-white/40">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="25" class="text-2xl">
+          <a href="https://python.org/" target="_blank"><span class="font-mono text-xs tracking-widest">Python</span></a>
+        </div>
 
-       <div class="flex items-center gap-2 text-white/40">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="25" class="text-2xl">
-        <a href="https://python.org/" target="_blank"><span class="font-mono text-xs tracking-widest">Python</span></a>
-      </div>
+        <div class="flex items-center gap-2 text-white/40">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg" width="25">
+          <a href="https://www.lua.org/portugues.html" target="_blank"><span class="font-mono text-xs tracking-widest">Lua</span></a>
+        </div>
 
-      <div class="flex items-center gap-2 text-white/40">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg" width="25">
-        <a href="https://www.lua.org/portugues.html" target="_blank"><span class="font-mono text-xs tracking-widest">Lua</span></a>
-      </div>
-     
+        <div class="flex items-center gap-2 text-white/40">
+          <i class="devicon-docker-plain colored text-2xl"></i>
+          <a href="https://www.docker.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Docker</span></a>
+        </div>
 
-      <div class="flex items-center gap-2 text-white/40">
-        <i class="devicon-docker-plain colored text-2xl"></i>
-        <a href="https://www.docker.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Docker</span></a>
-      </div>
+        <div class="flex items-center gap-2 text-white/40">
+          <img src="https://www.notion.com/_next/image?url=https%3A%2F%2Fs3.us-west-2.amazonaws.com%2Fpublic.notion-static.com%2Fcreator_images%2FFrame_2147224304.png&w=256&q=75" width="20">
+          <a href="https://lovable.dev/dashboard?utm_device=c&utm_source=google&utm_medium=paid_search_branded&utm_campaign=google-br-b2c-prospecting-evergreen-subscription-XB+-+Search+-+Lovable+-+CORE&campaignid=23350529747&gad_source=1&gad_campaignid=23350529747&gbraid=0AAAAA-iIxGcy9gn_JUgXSg_RO1YPwvtbx&gclid=CjwKCAjw5NvPBhAoEiwA_2egfg6w9H3UG5Rn3uxhfdIDE3OTVxA_o4bA66m8cONo4uFe4aKsqcBVpxoCenwQAvD_BwE" target="_blank"><span class="font-mono text-xs tracking-widest">Lovable</span></a>
+        </div>
 
-      <div class="flex items-center gap-2 text-white/40">
-        <img src="https://www.notion.com/_next/image?url=https%3A%2F%2Fs3.us-west-2.amazonaws.com%2Fpublic.notion-static.com%2Fcreator_images%2FFrame_2147224304.png&w=256&q=75" width="20">
-        <a href="https://lovable.dev/dashboard?utm_device=c&utm_source=google&utm_medium=paid_search_branded&utm_campaign=google-br-b2c-prospecting-evergreen-subscription-XB+-+Search+-+Lovable+-+CORE&campaignid=23350529747&gad_source=1&gad_campaignid=23350529747&gbraid=0AAAAA-iIxGcy9gn_JUgXSg_RO1YPwvtbx&gclid=CjwKCAjw5NvPBhAoEiwA_2egfg6w9H3UG5Rn3uxhfdIDE3OTVxA_o4bA66m8cONo4uFe4aKsqcBVpxoCenwQAvD_BwE" target="_blank"><span class="font-mono text-xs tracking-widest">Lovable</span></a>
-      </div>
+        <div class="flex items-center gap-2 text-white/40">
+          <img src="https://images.seeklogo.com/logo-png/55/2/claude-logo-png_seeklogo-554534.png" width="20">
+          <a href="https://claude.ai/new" target="_blank"><span class="font-mono text-xs tracking-widest">Claude</span></a>
+        </div>
 
-      <div class="flex items-center gap-2 text-white/40">
-        <img src="https://images.seeklogo.com/logo-png/55/2/claude-logo-png_seeklogo-554534.png" width="20">
-        <a href="https://claude.ai/new" target="_blank"><span class="font-mono text-xs tracking-widest">Claude</span></a>
-      </div>
+        <div class="flex items-center gap-2 text-white/40">
+          <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/supabase.webp" width="20">
+          <a href="https://supabase.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Supabase</span></a>
+        </div>
 
-      <div class="flex items-center gap-2 text-white/40">
-        <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/supabase.webp" width="20">
-        <a href="https://supabase.com/" target="_blank"><span class="font-mono text-xs tracking-widest">Supabase</span></a>
-      </div>
+        <div class="flex items-center gap-2 text-white/40">
+          <img src="https://circuitverse-docs.netlify.app/img/favicon.ico" width="20">
+          <a href="https://circuitverse.org/" target="_blank"><span class="font-mono text-xs tracking-widest">CircuitVerse</span></a>
+        </div>
 
-      <div class="flex items-center gap-2 text-white/40">
-        <img src="https://circuitverse-docs.netlify.app/img/favicon.ico" width="20">
-        <a href="https://www.circuitverse.com/" target="_blank"><span class="font-mono text-xs tracking-widest">CircuitVerse</span></a>
+        <div class="flex items-center gap-2 text-white/40">
+          <img src="https://i.redd.it/x6gnx2y78vy51.png" width="20">
+          <a href="https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html" target="_blank"><span class="font-mono text-xs tracking-widest">LTspice</span></a>
+        </div>
       </div>
-
-      <div class="flex items-center gap-2 text-white/40">
-        <img src="https://i.redd.it/x6gnx2y78vy51.png" width="20">
-        <a href="https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html" target="_blank"><span class="font-mono text-xs tracking-widest">LTspice</span></a>
-      </div>
-       
+      <div id="tech-track-clone" class="flex items-center gap-8 min-w-max"></div>
     </div>
   </div>
 
+     
 
 
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
+    const techTrack = document.getElementById('tech-track');
+    const techClone = document.getElementById('tech-track-clone');
+    const techWrapper = document.getElementById('tech-track-wrapper');
+
+    if (techTrack && techClone && techWrapper) {
+      techClone.innerHTML = techTrack.innerHTML;
+      let trackWidth = techTrack.offsetWidth;
+      let offset = -trackWidth;
+      let lastTime = performance.now();
+
+      const resizeTechMarquee = () => {
+        trackWidth = techTrack.offsetWidth;
+        offset = -trackWidth;
+        techWrapper.style.transform = `translateX(${offset}px)`;
+      };
+
+      const duration = 35000; // tempo de ciclo completo em ms
+      const animateTechMarquee = (now) => {
+        const delta = now - lastTime;
+        lastTime = now;
+        const speed = trackWidth / (duration / 1000); // pixels por segundo
+        offset += (speed * delta) / 1000;
+        if (offset >= 0) offset -= trackWidth;
+        techWrapper.style.transform = `translateX(${offset}px)`;
+        requestAnimationFrame(animateTechMarquee);
+      };
+
+      resizeTechMarquee();
+      window.addEventListener('resize', resizeTechMarquee);
+      requestAnimationFrame(animateTechMarquee);
+    }
 
 
     // FILTER
