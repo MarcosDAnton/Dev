@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nblue: '#00AAFF',
+            ngold: '#00AAFF',
+          },
+          fontFamily: {
+            orbit: ['Orbitron', 'sans-serif'],
+            mono: ['Share Tech Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .hidden-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .hidden-scrollbar::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+  </style>
+</head>
+
+<body
+  class="relative min-h-screen m-0 overflow-x-hidden bg-black text-[#d0d0d0] font-mono scroll-smooth hidden-scrollbar">
+  <canvas id="wire-canvas" class="fixed inset-0 z-0 pointer-events-none"></canvas>
+  <div
+    class="pointer-events-none fixed inset-0 z-[1] bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.07)_2px,rgba(0,0,0,0.07)_4px)]">
+  </div>
+
+  <!-- ==================================================================== HEADER ========================================================================================= -->
+  <header class="relative z-10 px-8 md:px-16 pt-20 pb-14">
+
+    <div
+      class="relative overflow-hidden transition-transform duration-300 ease-[cubic-bezier(.22,.68,0,1.2)] hover:-translate-y-1 border border-white/10 bg-white/5 p-6 shadow-[0_0_40px_rgba(0,0,0,0.25)] flex flex-col md:flex-row items-center gap-6 mb-12">
+      <img src="https://avatars.githubusercontent.com/u/274956009?v=4" alt="Foto de perfil"
+        class="h-28 w-28 border-2 border-white/20 object-cover shadow-lg" />
+      <div class="text-center md:text-left">
+        <p class="font-mono text-sm uppercase tracking-[0.36em] text-white/40 mb-3">Sobre mim</p>
+        <p class="font-mono text-sm text-white/70 leading-relaxed">
+          "Sou desenvolvedor fullstack apaixonado por tecnologia e movido pelo desafio de transformar ideias em soluções
+          simples e inovadoras. Meu foco está em construir projetos que unam interfaces limpas a uma estrutura robusta,
+          sempre priorizando segurança e qualidade dos projetos.
+          Vejo cada novo desafio como uma oportunidade de evoluir tecnicamente e contribuir para que a tecnologia
+          impacte positivamente a vida das pessoas."</p>
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+
+
+
+
+  <!-- ====================================================================== SECTION FILTERS ================================================================================
+   <section class="relative z-10 px-8 md:px-16 mt-12 flex flex-wrap gap-3 items-center">
+    <span class="font-mono text-xs text-white/20 tracking-widest mr-2">FILTRAR:</span>
+    <button onclick="fc('all')" class="fbtn px-4 py-2 border border-white/12 text-white/35 font-mono text-[0.65rem] uppercase tracking-[0.15em] bg-transparent transition-all duration-300 hover:text-[#00AAFF] hover:border-[#00AAFF44]" data-f="all">TODOS</button>
+    <button onclick="fc('projetos')" class="fbtn px-4 py-2 border border-white/12 text-white/35 font-mono text-[0.65rem] uppercase tracking-[0.15em] bg-transparent transition-all duration-300 hover:text-[#00AAFF] hover:border-[#00AAFF44]" data-f="web">projetos</button>
+    <button onclick="fc('projetos')" class="fbtn px-4 py-2 border border-white/12 text-white/35 font-mono text-[0.65rem] uppercase tracking-[0.15em] bg-transparent transition-all duration-300 hover:text-[#00AAFF] hover:border-[#00AAFF44]" data-f="mobile">projetos</button>
+    <button onclick="fc('firmware')" class="fbtn px-4 py-2 border border-white/12 text-white/35 font-mono text-[0.65rem] uppercase tracking-[0.15em] bg-transparent transition-all duration-300 hover:text-[#00AAFF] hover:border-[#00AAFF44]" data-f="mobile">FIRMWARE</button>
+  </section>
+-->
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ====================================================================== MAIN CARDS ====================================================================== -->
+  <main class="relative z-10 px-8 md:px-16 mt-8 pb-28">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="pgrid">
+
+
+
+      <!-- Arcade -->
+      <article data-cat="projetos"
+        class="relative overflow-hidden bg-[#080808] border border-[#1c1c1c] transition duration-300 ease-[cubic-bezier(.22,.68,0,1.2)] hover:-translate-y-1 hover:border-[#00AAFF33] hover:shadow-[0_0_30px_rgba(0,170,255,0.1),0_4_40px_rgba(0,0,0,0.5)] cursor-pointer group">
+        <a href="./projetos/Arcadex/index.html" target="_blank">
+          <div class="absolute top-0 left-0 w-[11px] h-[11px] border-t-[2px] border-l-[2px] border-[#00AAFF] z-10">
+          </div>
+          <div class="absolute bottom-0 right-0 w-[11px] h-[11px] border-b-[2px] border-r-[2px] border-[#00AAFF] z-10">
+          </div>
+
+          <div
+            class="h-[155px] relative overflow-hidden flex items-center justify-center bg-[linear-gradient(135deg,#050505,#00080f)]">
+            <img src="./projetos/Arcadex/card.png" width="100%">
+          </div>
+
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <h2
+                class="font-orbit text-sm font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                Arcadex</h2>
+            </div>
+            <p class="font-mono text-xs mt-2 leading-loose">
+              Sejam bem vindo(a)(s) ao meu Arcadex, onde você pode jogar vários jogos independentes ou em
+              plataformas famosas que eu desenvolvi ou estou desenvolvendo.
+            </p>
+          </div>
+        </a>
+      </article>
+
+
+
+      <!-- Laboratório de Circuitos Lógicos -->
+      <article data-cat="projetos"
+        class="relative overflow-hidden bg-[#080808] border border-[#1c1c1c] transition duration-300 ease-[cubic-bezier(.22,.68,0,1.2)] hover:-translate-y-1 hover:border-[#00AAFF33] hover:shadow-[0_0_30px_rgba(0,170,255,0.1),0_4_40px_rgba(0,0,0,0.5)] cursor-pointer group">
+        <a href="https://circuitverse.org/users/417583" target="_blank">
+
+          <div class="absolute top-0 left-0 w-[11px] h-[11px] border-t-[2px] border-l-[2px] border-[#00AAFF] z-10">
+          </div>
+          <div class="absolute bottom-0 right-0 w-[11px] h-[11px] border-b-[2px] border-r-[2px] border-[#00AAFF] z-10">
+          </div>
+
+          <div
+            class="h-[155px] relative overflow-hidden flex items-center justify-center bg-[linear-gradient(135deg,#050505,#00080f)]">
+            <img src="./projetos/Laboratorio-de-Circuitos.png" width="100%">
+          </div>
+
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <h2
+                class="font-orbit text-sm font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                Laboratório de Circuitos Lógicos</h2>
+            </div>
+            <p class="font-mono text-xs mt-2 leading-loose">
+              Página do meu Laboratório de Circuitos Lógicos no Circuit Verse.
+            </p>
+
+          </div>
+        </a>
+      </article>
+
+
+
+    </div>
+
+
+
+
+
+
+    <!-- Botão de Mais projetos... 
+     <div class="flex justify-center mt-14">
+      <button class="btn-n btn-nb">↓ Carregar Mais projetos</button>
+    </div>
+    -->
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ===================================================== FOOTER ================================================================================================ -->
+  <footer
+    class="relative z-10 border-t border-white/5 px-8 md:px-16 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span
+        class="w-[7px] h-[7px] rounded-full bg-[#00AAFF] inline-block animate-[pulse_1.8s_ease-in-out_infinite] shadow-[0_0_4px_#00AAFF,0_0_10px_#00AAFF]"></span>
+      &copy; <span id="current-year"></span>
+      PROJECTS</span>
+    </div>
+    <div class="flex gap-8">
+      <a href="https://github.com/MarcosDAnton" target="_blank"><img
+          src="https://github.githubassets.com/favicons/favicon.svg" class="w-4"></a>
+      <a href="https://www.linkedin.com/in/marcos-antonio-d-silva-pereira-843446402/" target="_blank"><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1280px-LinkedIn_icon.svg.png"
+          class="w-4"></a>
+      <a href="https://www.freelancer.com/u/marcosdanton" target="_blank"><img
+          src="https://www.freelancer.com/favicon.ico" class="w-4"></a>
+      <a href="https://br.fiverr.com/" target="_blank"><img src="https://www.fiverr.com/favicon.ico" class="w-4"></a>
+    </div>
+  </footer>
+
+  <!-- ====================================================================== UTILITÁRIOS ========================================================================================= -->
+  <section
+    class="relative z-10 border-t border-white/5 bg-[rgba(0,170,255,0.03)] py-4 px-8 md:px-16 overflow-x-auto hidden-scrollbar">
+    <div class="flex flex-nowrap items-center gap-8 min-w-max text-white/40">
+
+      <div class="flex items-center gap-2">
+        <a href="https://developer.mozilla.org/pt-BR/" target="_blank"><img
+            src="https://avatars.githubusercontent.com/u/7565578?s=200&v=4" class="w-4"></a>
+      </div>
+
+
+      <div class="flex items-center gap-2">
+        <a href="https://getbootstrap.com/" target="_blank"><i class="devicon-bootstrap-plain colored"></i></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://tailwindcss.com/" target="_blank"><i class="devicon-tailwindcss-plain colored"></i></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://nodejs.org/learn/getting-started/introduction-to-nodejs" target="_blank"><i class="devicon-nodejs-plain colored"></i></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://reactjs.org/" target="_blank"><i class="devicon-react-plain colored"></i></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://reactnative.dev/" target="_blank"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/3840px-React_Logo_SVG.svg.png"
+            class="w-4"></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://supabase.com/" target="_blank"><img
+            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/supabase.webp" class="w-4"></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://circuitverse.org/" target="_blank"><img
+            src="https://circuitverse-docs.netlify.app/img/favicon.ico" class="w-4"></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://devicon.dev/" target="_blank"><img src="https://avatars.githubusercontent.com/u/66767815?v=4"
+            class="w-4"></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://favicon.io/" target="_blank"><img
+            src="https://favicon.io/assets/img/navbar-logo-2x.d9aeaef3.png" class="w-16"></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://embarcados.com.br/" target="_blank"><img
+            src="https://embarcados.com.br/wp-content/uploads/2020/02/favicon-embarcados-512x512-1.png" class="w-4"></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://newtoncbraga.com.br/#gsc.tab=0" target="_blank"><img
+            src="https://newtoncbraga.com.br/media/system/images/joomla-favicon.svg" class="w-4"></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://br.mouser.com/?srsltid=AfmBOopXYFlcRGNawPuXYX2Pa7xHmLAwXXhQiIY_pMxWRZS_QFJA48Jt"
+          target="_blank"><img src="https://br.mouser.com/favicon.ico" class="w-4"></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://openai.com/pt-BR/" target="_blank"><img
+            src="https://www.edigitalagency.com.au/wp-content/uploads/new-ChatGPT-icon-white-png-large-size.png"
+            class="w-4"></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://create.roblox.com/dashboard/creations" target="_blank"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Roblox_Studio_icon_2025.svg/1280px-Roblox_Studio_icon_2025.svg.png"
+            class="w-4"></a>
+      </div>
+
+
+      <div class="flex items-center gap-2">
+        <a href="https://cursor.com/agents" target="_blank"><img
+            src="https://www.freelogovectors.net/wp-content/uploads/2025/06/cursor-logo-icon-freelogovectors.net_.png"
+            class="w-4"></a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://vscode.dev/" target="_blank"><img
+            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/visual-studio-code-icon.png"
+            class="w-4"></a>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- ====================================================================== ALGUMAS FUNÇÕES ========================================================================================= -->
+  <script>
+    // adiciona suporte para arrastar os cartões e reordenar como se fossem papéis
+    document.addEventListener('DOMContentLoaded', function () {
+      const grid = document.getElementById('pgrid');
+      if (!grid) return;
+
+      let dragged = null;
+
+      grid.querySelectorAll('article').forEach(article => {
+        article.style.position = 'relative';
+        article.draggable = true;
+        article.classList.add('cursor-grab');
+
+        article.addEventListener('dragstart', function (e) {
+          dragged = article;
+          article.classList.add('opacity-50');
+          e.dataTransfer.effectAllowed = 'move';
+        });
+
+        article.addEventListener('dragend', function () {
+          article.classList.remove('opacity-50');
+          dragged = null;
+        });
+
+        article.addEventListener('dragover', function (e) {
+          e.preventDefault();
+          if (!dragged || dragged === article) return;
+
+          const rect = article.getBoundingClientRect();
+          const next = (e.clientX - rect.left) > rect.width / 2;
+          grid.insertBefore(dragged, next ? article.nextElementSibling : article);
+        });
+
+        article.addEventListener('dragenter', function () {
+          if (article !== dragged) {
+            article.classList.add('ring-[1px]', 'ring-cyan-400/50');
+          }
+        });
+
+        article.addEventListener('dragleave', function () {
+          article.classList.remove('ring-[1px]', 'ring-cyan-400/50');
+        });
+
+        article.addEventListener('drop', function (e) {
+          e.preventDefault();
+          article.classList.remove('ring-[1px]', 'ring-cyan-400/50');
+        });
+      });
+    });
+  </script>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // FILTER
+    function fc(cat) {
+      const activeClasses = ['bg-[#00AAFF]', 'text-black', 'border-[#00AAFF]', 'shadow-[0_0_14px_rgba(0,170,255,0.66)]'];
+      document.querySelectorAll('.fbtn').forEach(b => b.classList.remove(...activeClasses));
+      const activeBtn = document.querySelector(`[data-f="${cat}"]`);
+      if (activeBtn) activeBtn.classList.add(...activeClasses);
+      document.querySelectorAll('#pgrid article').forEach(card => {
+        const match = cat === 'all' || card.dataset.cat === cat;
+        card.style.transition = 'opacity .3s ease, transform .3s ease';
+        if (match) {
+          card.style.opacity = '1'; card.style.transform = '';
+          card.style.pointerEvents = ''; card.style.display = '';
+        } else {
+          card.style.opacity = '0'; card.style.transform = 'scale(0.96)';
+          card.style.pointerEvents = 'none';
+          setTimeout(() => { card.style.display = 'none'; }, 320);
+        }
+      });
+    }
+
+
+
+
+
+
+    // ENERGY WIRES CANVAS
+    const cv = document.getElementById('wire-canvas');
+    const ctx = cv.getContext('2d');
+
+    function resize() { cv.width = innerWidth; cv.height = innerHeight; }
+    resize(); window.addEventListener('resize', resize);
+
+    const WIRES = 6;
+    const wires = [];
+
+    function makeWire() {
+      const col = [0, 255, 110];
+      const pts = [];
+
+      // start from edge
+      const edge = Math.floor(Math.random() * 4); // 0=top,1=right,2=bottom,3=left
+      let sx, sy;
+      if (edge === 0) { sx = Math.random() * cv.width; sy = 0; }
+      else if (edge === 1) { sx = cv.width; sy = Math.random() * cv.height; }
+      else if (edge === 2) { sx = Math.random() * cv.width; sy = cv.height; }
+      else { sx = 0; sy = Math.random() * cv.height; }
+
+      pts.push({ x: sx, y: sy });
+
+      // build zigzag path
+      let cx2 = sx, cy2 = sy;
+      const steps = 3 + Math.floor(Math.random() * 6);
+      for (let i = 0; i < steps; i++) {
+        if (Math.random() < 0.5) {
+          cx2 = Math.random() * cv.width;
+        } else {
+          cy2 = Math.random() * cv.height;
+        }
+        pts.push({ x: cx2, y: cy2 });
+      }
+      // end at opposite-ish edge
+      if (edge === 0) pts.push({ x: Math.random() * cv.width, y: cv.height + 10 });
+      else if (edge === 1) pts.push({ x: -10, y: Math.random() * cv.height });
+      else if (edge === 2) pts.push({ x: Math.random() * cv.width, y: -10 });
+      else pts.push({ x: cv.width + 10, y: Math.random() * cv.height });
+
+      return {
+        pts, col,
+        alpha: 0.10 + Math.random() * 0.14,
+        width: 0.4 + Math.random() * 0.9,
+        progress: Math.random(),
+        speed: 0.0007 + Math.random() * 0.0013,
+        tail: 0.1 + Math.random() * 0.2,
+        glow: 2 + Math.random() * 5,
+      };
+    }
+
+    for (let i = 0; i < WIRES; i++) wires.push(makeWire());
+
+    function ptAt(pts, t) {
+      const total = pts.length - 1;
+      const seg = Math.min(Math.floor(t * total), total - 1);
+      const f = t * total - seg;
+      const a = pts[seg], b = pts[seg + 1];
+      return { x: a.x + (b.x - a.x) * f, y: a.y + (b.y - a.y) * f };
+    }
+
+    function drawWire(w) {
+      const [r, g, b] = w.col;
+      const head = w.progress;
+      const tail = Math.max(0, head - w.tail);
+      const N = 70;
+
+      // glow pass
+      ctx.save();
+      ctx.shadowColor = `rgb(${r},${g},${b})`;
+      ctx.shadowBlur = w.glow * 2;
+      ctx.strokeStyle = `rgba(${r},${g},${b},${w.alpha * 0.22})`;
+      ctx.lineWidth = w.width * 2.5;
+      ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+      ctx.beginPath();
+      for (let i = 0; i <= N; i++) {
+        const t = tail + (head - tail) * (i / N);
+        const p = ptAt(w.pts, t);
+        i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+      }
+      ctx.stroke();
+      ctx.restore();
+
+      // core
+      ctx.save();
+      ctx.shadowColor = `rgb(${r},${g},${b})`;
+      ctx.shadowBlur = w.glow * 0.6;
+      ctx.strokeStyle = `rgba(${r},${g},${b},${w.alpha * 0.7})`;
+      ctx.lineWidth = w.width * 0.8;
+      ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+      ctx.beginPath();
+      for (let i = 0; i <= N; i++) {
+        const t = tail + (head - tail) * (i / N);
+        const p = ptAt(w.pts, t);
+        i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+      }
+      ctx.stroke();
+      ctx.restore();
+
+      // head spark
+      const hp = ptAt(w.pts, head);
+      ctx.save();
+      ctx.shadowColor = `rgb(${r},${g},${b})`;
+      ctx.shadowBlur = 12;
+      ctx.fillStyle = `rgba(${r},${g},${b},${Math.min(w.alpha * 1.4, 0.5)})`;
+      ctx.beginPath();
+      ctx.arc(hp.x, hp.y, w.width * 2.2, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    let last = 0;
+    function loop(ts) {
+      const dt = Math.min((ts - last) / 1000, 0.05);
+      last = ts;
+      ctx.clearRect(0, 0, cv.width, cv.height);
+
+      for (const w of wires) {
+        w.progress += w.speed * dt * 15;
+        if (w.progress > 1 + w.tail) Object.assign(w, makeWire(), { progress: 0 });
+        drawWire(w);
+      }
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+  </script>
+
+</body>
+
+</html>
