@@ -48,7 +48,6 @@
     class="pointer-events-none fixed inset-0 z-[1] bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.07)_2px,rgba(0,0,0,0.07)_4px)]">
   </div>
 
-  <!-- ==================================================================== HEADER ========================================================================================= -->
   <header class="relative z-10 px-8 md:px-16 pt-20 pb-14">
 
     <div
@@ -68,42 +67,10 @@
 
   </header>
 
-
-
-
-
-
-
-
-
-  <!-- ====================================================================== SECTION FILTERS ================================================================================
-   <section class="relative z-10 px-8 md:px-16 mt-12 flex flex-wrap gap-3 items-center">
-    <span class="font-mono text-xs text-white/20 tracking-widest mr-2">FILTRAR:</span>
-    <button onclick="fc('all')" class="fbtn px-4 py-2 border border-white/12 text-white/35 font-mono text-[0.65rem] uppercase tracking-[0.15em] bg-transparent transition-all duration-300 hover:text-[#00AAFF] hover:border-[#00AAFF44]" data-f="all">TODOS</button>
-    <button onclick="fc('projetos')" class="fbtn px-4 py-2 border border-white/12 text-white/35 font-mono text-[0.65rem] uppercase tracking-[0.15em] bg-transparent transition-all duration-300 hover:text-[#00AAFF] hover:border-[#00AAFF44]" data-f="web">projetos</button>
-    <button onclick="fc('projetos')" class="fbtn px-4 py-2 border border-white/12 text-white/35 font-mono text-[0.65rem] uppercase tracking-[0.15em] bg-transparent transition-all duration-300 hover:text-[#00AAFF] hover:border-[#00AAFF44]" data-f="mobile">projetos</button>
-    <button onclick="fc('firmware')" class="fbtn px-4 py-2 border border-white/12 text-white/35 font-mono text-[0.65rem] uppercase tracking-[0.15em] bg-transparent transition-all duration-300 hover:text-[#00AAFF] hover:border-[#00AAFF44]" data-f="mobile">FIRMWARE</button>
-  </section>
--->
-
-
-
-
-
-
-
-
-
-
-
-  <!-- ====================================================================== MAIN CARDS ====================================================================== -->
   <main class="relative z-10 px-8 md:px-16 mt-8 pb-28">
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="pgrid">
 
-
-
-      <!-- Arcade -->
       <article data-cat="projetos"
         class="relative overflow-hidden bg-[#080808] border border-[#1c1c1c] transition duration-300 ease-[cubic-bezier(.22,.68,0,1.2)] hover:-translate-y-1 hover:border-[#00AAFF33] hover:shadow-[0_0_30px_rgba(0,170,255,0.1),0_4_40px_rgba(0,0,0,0.5)] cursor-pointer group">
         <a href="./projetos/Arcadex/index.html" target="_blank">
@@ -131,9 +98,6 @@
         </a>
       </article>
 
-
-
-      <!-- Laboratório de Circuitos Lógicos -->
       <article data-cat="projetos"
         class="relative overflow-hidden bg-[#080808] border border-[#1c1c1c] transition duration-300 ease-[cubic-bezier(.22,.68,0,1.2)] hover:-translate-y-1 hover:border-[#00AAFF33] hover:shadow-[0_0_30px_rgba(0,170,255,0.1),0_4_40px_rgba(0,0,0,0.5)] cursor-pointer group">
         <a href="https://circuitverse.org/users/417583" target="_blank">
@@ -162,42 +126,16 @@
         </a>
       </article>
 
-
-
     </div>
 
-
-
-
-
-
-    <!-- Botão de Mais projetos... 
-     <div class="flex justify-center mt-14">
-      <button class="btn-n btn-nb">↓ Carregar Mais projetos</button>
-    </div>
-    -->
   </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- ===================================================== FOOTER ================================================================================================ -->
   <footer
     class="relative z-10 border-t border-white/5 px-8 md:px-16 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
     <div class="flex items-center gap-3">
       <span
         class="w-[7px] h-[7px] rounded-full bg-[#00AAFF] inline-block animate-[pulse_1.8s_ease-in-out_infinite] shadow-[0_0_4px_#00AAFF,0_0_10px_#00AAFF]"></span>
       &copy;Dev <span id="current-year"></span>  
-    </span>
     </div>
     <div class="flex gap-8">
       <a href="https://github.com/MarcosDAnton" target="_blank"><img
@@ -211,7 +149,6 @@
     </div>
   </footer>
 
-  <!-- ====================================================================== UTILITÁRIOS ========================================================================================= -->
   <section
     class="relative z-10 border-t border-white/5 bg-[rgba(0,170,255,0.03)] py-4 px-8 md:px-16 overflow-x-auto hidden-scrollbar">
     <div class="flex flex-nowrap items-center gap-8 min-w-max text-white/40">
@@ -288,7 +225,6 @@
           target="_blank"><img src="https://raw.githubusercontent.com/builtwith/builtwith/main/newLogoSquare.png" class="w-4"></a>
       </div>
 
-      
       <div class="flex items-center gap-2">
         <a href="https://chatgpt.com/" target="_blank"><img
             src="https://www.edigitalagency.com.au/wp-content/uploads/new-ChatGPT-icon-white-png-large-size.png"
@@ -332,14 +268,8 @@
       </div>
 
     </div>
-
-    </div>
   </section>
 
-
-
-
-  <!-- ====================================================================== ALGUMAS FUNÇÕES ========================================================================================= -->
   <script>
     // adiciona suporte para arrastar os cartões e reordenar como se fossem papéis
     document.addEventListener('DOMContentLoaded', function () {
@@ -414,11 +344,6 @@
       });
     }
 
-
-
-
-
-
     // ENERGY WIRES CANVAS
     const cv = document.getElementById('wire-canvas');
     const ctx = cv.getContext('2d');
@@ -430,7 +355,9 @@
     const wires = [];
 
     function makeWire() {
-      const col = [0, 255, 110];
+      // Sorteia 50% de chance para verde ou azul neon
+      const isGreen = Math.random() < 0.5;
+      const col = isGreen ? [0, 255, 110] : [0, 170, 255]; 
       const pts = [];
 
       // start from edge
