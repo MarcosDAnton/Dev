@@ -75,7 +75,7 @@
       <!-- MODELO DOS CARDS
       <article data-cat="projetos"
         class="relative overflow-hidden bg-[#080808] border border-[#1c1c1c] transition duration-300 ease-[cubic-bezier(.22,.68,0,1.2)] hover:-translate-y-1 hover:border-[#00AAFF33] hover:shadow-[0_0_30px_rgba(0,170,255,0.1),0_4_40px_rgba(0,0,0,0.5)] cursor-pointer group">
-        <a href="https://circuitverse.org/users/417583" target="_blank">
+        <a href="#" target="_blank">
 
           <div class="absolute top-0 left-0 w-[11px] h-[11px] border-t-[2px] border-l-[2px] border-[#00AAFF] z-10">
           </div>
@@ -84,17 +84,17 @@
 
           <div
             class="h-[155px] relative overflow-hidden flex items-center justify-center bg-[linear-gradient(135deg,#050505,#00080f)]">
-            <img src="./projetos/Laboratorio-de-Circuitos.png" width="100%">
+            <img src="./" width="100%">
           </div>
 
           <div class="p-5">
             <div class="flex items-start justify-between gap-2">
               <h2
                 class="font-orbit text-sm font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                Laboratório de Circuitos Lógicos</h2>
+               Título do Projeto</h2>
             </div>
             <p class="font-mono text-xs mt-2 leading-loose">
-              Página do meu Laboratório de Circuitos Lógicos no Circuit Verse.
+              Descrição
             </p>
 
           </div>
@@ -102,6 +102,34 @@
       </article>
       -->
 
+      <!-- Dexi - Codex Browser-->
+      <article data-cat="projetos"
+        class="relative overflow-hidden bg-[#080808] border border-[#1c1c1c] transition duration-300 ease-[cubic-bezier(.22,.68,0,1.2)] hover:-translate-y-1 hover:border-[#00AAFF33] hover:shadow-[0_0_30px_rgba(0,170,255,0.1),0_4_40px_rgba(0,0,0,0.5)] cursor-pointer group">
+        <a href="https://dextre-tecnologia.github.io/Dexi/" target="_blank">
+
+          <div class="absolute top-0 left-0 w-[11px] h-[11px] border-t-[2px] border-l-[2px] border-[#00AAFF] z-10">
+          </div>
+          <div class="absolute bottom-0 right-0 w-[11px] h-[11px] border-b-[2px] border-r-[2px] border-[#00AAFF] z-10">
+          </div>
+
+          <div
+            class="h-[155px] relative overflow-hidden flex items-center justify-center bg-[linear-gradient(135deg,#050505,#00080f)]">
+            <img src="./projetos/Dexi - Codex - Browser/Dexi-Bannner.png" width="100%">
+          </div>
+
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <h2
+                class="font-orbit text-sm font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+               Dexi - Codex - Browser</h2>
+            </div>
+            <p class="font-mono text-xs mt-2 leading-loose">
+              Este é um protótipo de um software web que serve como visualizador de arquivos, links e notas como um codex de conteúdos que virá a ser um navegador integrado com I.A.
+            </p>
+
+          </div>
+        </a>
+      </article>
     </div>
 
   </main>
@@ -142,6 +170,7 @@
     </div>
   </footer>
 
+  <!-- UTILITÁRIOS -->
   <section
     class="relative z-10 border-t border-white/5 bg-[rgba(0,170,255,0.03)] py-4 px-8 md:px-16 overflow-x-auto hidden-scrollbar">
     <div class="flex flex-nowrap items-center gap-8 min-w-max text-white/40">
@@ -278,6 +307,7 @@
     </div>
   </section>
 
+  <!-- FUNÇÔES -->
   <script>
     // adiciona suporte para arrastar os cartões e reordenar como se fossem papéis
     document.addEventListener('DOMContentLoaded', function () {
@@ -327,10 +357,9 @@
         });
       });
     });
-  </script>
 
-  <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+     document.getElementById('current-year').textContent = new Date().getFullYear();
 
     // FILTER
     function fc(cat) {
@@ -481,6 +510,7 @@
     }
     requestAnimationFrame(loop);
   </script>
+
 
 </body>
 
