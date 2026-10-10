@@ -100,9 +100,9 @@
 
     .utility-add-btn.is-selected {
       background: rgba(0, 170, 255, 0.2);
-      border-color: rgba(0, 170, 255, 0.9);
+      border-color: rgba(255, 221, 0, 0.9);
       color: #fff;
-      box-shadow: 0 0 14px rgba(0, 170, 255, 0.4);
+      box-shadow: 0 0 14px rgba(255, 221, 0, 0.9);
     }
   </style>
 </head>
@@ -203,7 +203,7 @@
     class="relative z-10 border-t border-white/5 px-8 md:px-16 py-8 flex flex-col items-stretch justify-start gap-2">
     <div class="order-last self-end flex items-center gap-3">
       <span
-        class="w-[7px] h-[7px] rounded-full bg-[#00AAFF] inline-block animate-[pulse_1.8s_ease-in-out_infinite] shadow-[0_0_4px_#00AAFF,0_0_10px_#00AAFF]"></span>
+        class="w-[7px] h-[7px] rounded-full bg-[#FFD400] inline-block animate-[pulse_1.8s_ease-in-out_infinite] shadow-[0_0_4px_#FFD400,0_0_10px_#FFD400]"></span>
       &copy;Dev <span id="current-year"></span>  
     </div>
     <div id="social-links" class="social-links order-first self-end flex gap-8">
@@ -625,9 +625,8 @@
     const wires = [];
 
     function makeWire() {
-      // Sorteia 50% de chance para verde ou azul neon
-      const isGreen = Math.random() < 0.5;
-      const col = isGreen ? [0, 255, 110] : [0, 170, 255]; 
+      // Força amarelo em todas as linhas do canvas
+      const col = [255, 221, 0];
       const pts = [];
 
       // start from edge
